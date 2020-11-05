@@ -24,6 +24,6 @@ framework:
                             binding_keys: [user_queue]
                     auto_setup: true
             failed:
-                dsn: 'doctrine://dafault?queue_name=failed'
+                dsn: 'doctrine://default?queue_name=failed'
         routing:
             'Mailer\Messenger\Message\UserRegisteredMessage': amqp_user
