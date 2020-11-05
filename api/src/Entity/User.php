@@ -180,9 +180,6 @@ class User implements UserInterface
         return $this->updateAt;
     }
 
-    /**
-     * @param \DateTime $updateAt
-     */
     public function markAsUpdated(): void
     {
         $this->updateAt = new \DateTime();
@@ -200,7 +197,7 @@ class User implements UserInterface
 
     public function getUsername(): string
     {
-        return $this->name;
+        return $this->email;
     }
 
     public function eraseCredentials()

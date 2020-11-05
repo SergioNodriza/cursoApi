@@ -5,7 +5,7 @@ App\Entity\User:
   collectionOperations:
     register:
       method: POST
-      path: /user/register
+      path: /users/register
       controller: App\Api\Action\User\Register
       denormalization_context:
         groups: [user_post]

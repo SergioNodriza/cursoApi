@@ -1,15 +1,12 @@
 <?php
 
-
 namespace App\Service\Request;
-
 
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Request;
 
 class RequestService
 {
-
     /**
      * @param Request $request
      * @param string $fieldName
@@ -53,7 +50,7 @@ class RequestService
         $return = [];
 
         foreach ($array as $key => $value) {
-            if(\is_array($value)) {
+            if (\is_array($value)) {
                 $return = \array_merge($return, self::arrayFlatten($value));
             } else {
                 $return[$key] = $value;

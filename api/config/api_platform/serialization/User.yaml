@@ -12,7 +12,7 @@ App\Entity\User:
       groups: [user_read]
     active:
       groups: [user_read]
-    created_At:
+    createdAt:
       groups: [user_read]
-    updated_At:
+    updateAt:
       groups: [user_read]

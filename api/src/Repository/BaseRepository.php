@@ -78,17 +78,17 @@ abstract class BaseRepository
      * @return array
      * @throws Exception
      */
-     public function executeFetchQuery(string $query, array $params = []): array
-     {
-         return $this->connection->executeQuery($query, $params)->fetchAll();
-     }
+    protected function executeFetchQuery(string $query, array $params = []): array
+    {
+        return $this->connection->executeQuery($query, $params)->fetchAll();
+    }
 
     /**
      * @param string $query
      * @param array $params
      * @throws Exception
      */
-    public function executeQuery(string $query, array $params = []): void
+    protected function executeQuery(string $query, array $params = []): void
     {
         $this->connection->executeQuery($query, $params);
     }
@@ -98,7 +98,6 @@ abstract class BaseRepository
      */
     private function getEntityManager()
     {
-
         $entityManager = $this->managerRegistry->getManager();
 
         if ($entityManager->isOpen()) {

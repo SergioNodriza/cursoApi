@@ -30,7 +30,7 @@ final class Version20201103091227 extends AbstractMigration
             active TINYINT(1) DEFAULT 0,
             reset_password_token VARCHAR(100) DEFAULT NULL,
             created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-            updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            update_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
             INDEX IDX_user_email (email),
             CONSTRAINT U_user_email UNIQUE KEY (email)
             )'
