@@ -16,6 +16,8 @@
 ###< symfony/phpunit-bridge ###
 
 .php_cs.cache
+.idea
+.DS_Store
 docker-compose.yml
 
 ###> lexik/jwt-authentication-bundle ###
