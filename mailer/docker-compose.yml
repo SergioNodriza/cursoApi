@@ -54,4 +54,4 @@ volumes:
 
 networks:
   symfony-api-platform-network:
-    external: truedry
+    external: true
