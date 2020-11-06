@@ -37,6 +37,41 @@ App\Entity\User:
                   properties:
                     message:
                       type: string
+    login:
+      method: POST
+      route_name: api_login_check
+      openapi_context:
+        summary: Login a user in the API
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  password:
+                    type: string
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    token:
+                      type: string
+
   itemOperations:
     get:
       method: GET
+    activate:
+      method: PUT
+      path: /users/{id}/activate
+      controller: App\Api\Action\User\ActivateAccount
+      deserialize: false
+      denormalization_context:
+        groups: [user_activate]
+      openapi_context:
+        summary: Activates a user
