@@ -1,4 +1,14 @@
 ###
+POST http://localhost:250/api/v1/users/register
+Content-Type: application/json
+
+{
+  "name": "Juan",
+  "email": "juan@api.com",
+  "password": "123456"
+}
+
+###
 POST http://localhost:250/api/v1/users/resend_activation_email
 Content-Type: application/json
 
@@ -8,11 +18,28 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:250/api/v1/users/register
+PUT http://localhost:250/api/v1/users/4612abc9-5168-4f31-94bb-d2e0e5e9989b/activate
 Content-Type: application/json
 
 {
-  "name": "Juan",
-  "email": "juan@api.com",
+"token": "4da0f72270f43d2c09d6822528417d333f28446f"
+}
+
+###
+
+POST http://localhost:250/api/v1/users/login_check
+Content-Type: application/json
+
+{
+  "username": "juan@api.com",
   "password": "123456"
+}
+
+###
+
+POST http://localhost:250/api/v1/users/request_reset_password
+Content-Type: application/json
+
+{
+  "email": "juan@api.com"
 }
