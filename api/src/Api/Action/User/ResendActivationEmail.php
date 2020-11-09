@@ -13,18 +13,14 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ResendActivationEmail
 {
-
     private ResendActivationEmailService $activationEmail;
 
     public function __construct(ResendActivationEmailService $activationEmail)
     {
-
         $this->activationEmail = $activationEmail;
     }
 
     /**
-     * @param Request $request
-     * @return JsonResponse
      * @throws ORMException
      * @throws OptimisticLockException
      */

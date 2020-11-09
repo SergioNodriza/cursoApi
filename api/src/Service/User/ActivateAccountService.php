@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Service\User;
 
-
 use App\Entity\User;
 use App\Repository\UserRepository;
 use Doctrine\ORM\OptimisticLockException;
@@ -20,9 +19,6 @@ class ActivateAccountService
     }
 
     /**
-     * @param string $id
-     * @param string $token
-     * @return User
      * @throws ORMException
      * @throws OptimisticLockException
      */

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Repository;
 
-
 use App\Entity\User;
 use App\Exceptions\User\UserNotFoundException;
 use Doctrine\ORM\OptimisticLockException;
@@ -12,7 +11,6 @@ use Doctrine\ORM\ORMException;
 
 class UserRepository extends BaseRepository
 {
-
     protected static function entityClass(): string
     {
         return User::class;
@@ -23,6 +21,7 @@ class UserRepository extends BaseRepository
         if (null === $user = $this->objectRepository->find($id)) {
             throw UserNotFoundException::fromId($id);
         }
+
         return $user;
     }
 
@@ -31,6 +30,7 @@ class UserRepository extends BaseRepository
         if (null === $user = $this->objectRepository->findOneBy(['email' => $email])) {
             throw UserNotFoundException::fromEmail($email);
         }
+
         return $user;
     }
 
@@ -39,6 +39,7 @@ class UserRepository extends BaseRepository
         if (null === $user = $this->objectRepository->findOneBy(['id' => $id, 'token' => $token, 'active' => false])) {
             throw UserNotFoundException::fromUserIdAndToken($id, $token);
         }
+
         return $user;
     }
 
@@ -47,11 +48,11 @@ class UserRepository extends BaseRepository
         if (null === $user = $this->objectRepository->findOneBy(['id' => $id, 'resetPasswordToken' => $ResetPasswordToken])) {
             throw UserNotFoundException::fromUserIdAndToken($id, $ResetPasswordToken);
         }
+
         return $user;
     }
 
     /**
-     * @param User $user
      * @throws ORMException
      * @throws OptimisticLockException
      */
@@ -61,7 +62,6 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * @param User $user
      * @throws ORMException
      * @throws OptimisticLockException
      */

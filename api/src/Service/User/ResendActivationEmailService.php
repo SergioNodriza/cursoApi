@@ -4,22 +4,17 @@ declare(strict_types=1);
 
 namespace App\Service\User;
 
-
 use App\Exceptions\User\UserIsActiveException;
 use App\Messenger\Message\UserRegisteredMessage;
 use App\Messenger\RoutingKey;
 use App\Repository\UserRepository;
-use App\Service\Request\RequestService;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Messenger\Bridge\Amqp\Transport\AmqpStamp;
 use Symfony\Component\Messenger\MessageBusInterface;
 
 class ResendActivationEmailService
 {
-
-
     private UserRepository $userRepository;
     private MessageBusInterface $messageBus;
 
@@ -30,7 +25,6 @@ class ResendActivationEmailService
     }
 
     /**
-     * @param string $email
      * @throws ORMException
      * @throws OptimisticLockException
      */
@@ -49,6 +43,5 @@ class ResendActivationEmailService
             new UserRegisteredMessage($user->getId(), $user->getName(), $user->getEmail(), $user->getToken()),
             [new AmqpStamp(RoutingKey::USER_QUEUE)]
         );
-
     }
 }

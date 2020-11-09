@@ -7,7 +7,6 @@ namespace App\Service\User;
 use App\Messenger\Message\RequestResetPasswordMessage;
 use App\Messenger\RoutingKey;
 use App\Repository\UserRepository;
-use App\Service\Request\RequestService;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,13 +20,13 @@ class RequestResetPasswordService
 
     public function __construct(UserRepository $userRepository, MessageBusInterface $messageBus)
     {
-
         $this->userRepository = $userRepository;
         $this->messageBus = $messageBus;
     }
 
     /**
      * @param Request $request
+     *
      * @throws ORMException
      * @throws OptimisticLockException
      */

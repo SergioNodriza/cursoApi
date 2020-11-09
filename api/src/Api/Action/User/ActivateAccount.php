@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Api\Action\User;
 
-
 use App\Entity\User;
 use App\Service\Request\RequestService;
 use App\Service\User\ActivateAccountService;
@@ -22,14 +21,11 @@ class ActivateAccount
     }
 
     /**
-     * @param Request $request
-     * @param string $id
-     * @return User
      * @throws ORMException
      * @throws OptimisticLockException
      */
     public function __invoke(Request $request, string $id): User
     {
-        return $this->activateAccountService->activate($id, RequestService::getField($request, 'token') );
+        return $this->activateAccountService->activate($id, RequestService::getField($request, 'token'));
     }
 }

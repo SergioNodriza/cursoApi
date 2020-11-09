@@ -8,10 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 class RequestService
 {
     /**
-     * @param Request $request
-     * @param string $fieldName
-     * @param bool $isRequired
-     * @param bool $isArray
      * @return mixed
      */
     public static function getField(Request $request, string $fieldName, bool $isRequired = true, bool $isArray = false)

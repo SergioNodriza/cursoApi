@@ -17,13 +17,10 @@ class RequestResetPassword
 
     public function __construct(RequestResetPasswordService $requestResetPassword)
     {
-
         $this->requestResetPassword = $requestResetPassword;
     }
 
     /**
-     * @param Request $request
-     * @return JsonResponse
      * @throws ORMException
      * @throws OptimisticLockException
      */

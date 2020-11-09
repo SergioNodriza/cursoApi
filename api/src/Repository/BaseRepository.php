@@ -16,7 +16,6 @@ use Doctrine\Persistence\ObjectRepository;
 
 abstract class BaseRepository
 {
-
     private ManagerRegistry $managerRegistry;
     protected Connection $connection;
     protected ObjectRepository $objectRepository;
@@ -31,7 +30,6 @@ abstract class BaseRepository
     abstract protected static function entityClass(): string;
 
     /**
-     * @param object $entity
      * @throws ORMException
      */
     public function persistEntity(object $entity): void
@@ -51,7 +49,6 @@ abstract class BaseRepository
     }
 
     /**
-     * @param object $entity
      * @throws ORMException
      * @throws OptimisticLockException
      */
@@ -62,7 +59,6 @@ abstract class BaseRepository
     }
 
     /**
-     * @param object $entity
      * @throws ORMException
      * @throws OptimisticLockException
      */
@@ -73,9 +69,6 @@ abstract class BaseRepository
     }
 
     /**
-     * @param string $query
-     * @param array $params
-     * @return array
      * @throws Exception
      */
     protected function executeFetchQuery(string $query, array $params = []): array
@@ -84,8 +77,6 @@ abstract class BaseRepository
     }
 
     /**
-     * @param string $query
-     * @param array $params
      * @throws Exception
      */
     protected function executeQuery(string $query, array $params = []): void

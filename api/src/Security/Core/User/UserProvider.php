@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Security\Core\User;
 
-
 use App\Entity\User;
 use App\Exceptions\User\UserNotFoundException;
 use App\Repository\UserRepository;
