@@ -32,7 +32,7 @@ Content-Type: application/json
 
 {
   "username": "juan@api.com",
-  "password": "123456"
+  "password": "password"
 }
 
 ###
@@ -42,4 +42,17 @@ Content-Type: application/json
 
 {
   "email": "juan@api.com"
+}
+
+###
+
+POST http://localhost:250/api/v1/users/reset_password
+Content-Type: application/json
+
+{
+
+  "userId": "4612abc9-5168-4f31-94bb-d2e0e5e9989b",
+  "resetPasswordToken": "0aaa51928a2ed553cba4af47f0ecbe60780dfd74",
+  "password": "password"
+
 }
