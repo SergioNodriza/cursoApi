@@ -32,7 +32,7 @@ Content-Type: application/json
 
 {
   "username": "juan@api.com",
-  "password": "password"
+  "password": "passwordnew"
 }
 
 ###
@@ -54,5 +54,18 @@ Content-Type: application/json
   "userId": "4612abc9-5168-4f31-94bb-d2e0e5e9989b",
   "resetPasswordToken": "0aaa51928a2ed553cba4af47f0ecbe60780dfd74",
   "password": "password"
+
+}
+
+###
+
+POST http://localhost:250/api/v1/users/change_password
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MDQ5MDY2MTIsImV4cCI6MTYxMDA5MDYxMiwidXNlcm5hbWUiOiJqdWFuQGFwaS5jb20iLCJpZCI6IjQ2MTJhYmM5LTUxNjgtNGYzMS05NGJiLWQyZTBlNWU5OTg5YiJ9.V9kDAfXRm3iwOgHIaNcsSFW46Hc6sry74NA0X8JSIE29Nu5387vvNYmwu0Cx6_vGgwG57Pcv8sJxG2Ik_7uyMAlU4TMDrLaz6mebY4NvakRl7Bpr1xF3u_vFLz7AJ_FPo9W8vpYgcDAGZvbA3F9yWAU6_7_1VzCw_QNU6lieOj885n7tJwJQ6kipRG7Ja03-9lez3V6f8zLZ4fBG3PXXQejIgLHtIt2pBZ8q18wvbi4Y_dOSqifNx4kOLkYFYxGzCyj7jJRVelmhockT_ojVeEXyH5rP7tzy6fOwGAXwVcsF4ch78Q8Y_qbaGjnOvERwTVxG1n-Eqj4j2FDZ2vypzM9Xq8uWsezSKhrxn5IJYDrV5xHsqeC5xOBaojG47_bl65eVus2AtOgKUUbwGhDOywFLYzofHhIaVkQw1fM_FSwEnO30uiAvv37B7UtCsxJbjFpj0FLDolmo4iPo3yeWTQRwZ5OVx8Xd3qVpuInupoEyuuEQFIdbIQ7fFAaBSPXFcE-e4H8R8VN_gDFbqa5gtzhgtU5oBzw3U8p69R-tkv29zCkgSjumNby1P6uDmQg8C8JTv-qXISKP89Hm3ioKYDPE2MlduQHqyoeAPLSld44NMMEe-HENEFgShZ6giarvWqz_CZ3tVMQ1g2lBsf4TLzsvfOb8YrxJjA-G7PSSO-A
+
+{
+
+  "oldPassword": "password",
+  "newPassword": "passwordnew"
 
 }
