@@ -9,7 +9,7 @@ security:
 
     firewalls:
         register:
-            pattern: ^/api/v1/register
+            pattern: ^/api/v1/users/register
             methods: [POST]
             security: false
         resend_activation_email:
