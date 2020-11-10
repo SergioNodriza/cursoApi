@@ -23,6 +23,10 @@ class ChangePasswordService
     }
 
     /**
+     * @param string $userId
+     * @param string $oldPassword
+     * @param string $newPassword
+     * @return User
      * @throws ORMException
      * @throws OptimisticLockException
      */

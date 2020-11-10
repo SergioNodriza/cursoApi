@@ -25,8 +25,7 @@ class RequestResetPasswordService
     }
 
     /**
-     * @param Request $request
-     *
+     * @param string $email
      * @throws ORMException
      * @throws OptimisticLockException
      */
