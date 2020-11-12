@@ -148,4 +148,9 @@ class User implements UserInterface
     public function eraseCredentials()
     {
     }
+
+    public function equals(User $user)
+    {
+        return $this->id === $user->getId();
+    }
 }
