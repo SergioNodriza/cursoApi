@@ -7,7 +7,6 @@ namespace App\Service\File;
 
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\FilesystemInterface;
-use PHPUnit\Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
