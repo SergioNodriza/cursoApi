@@ -113,7 +113,7 @@ class Group
         return $this->users->contains($user);
     }
 
-    public function isOwnBy(User $user): bool
+    public function isOwnedBy(User $user): bool
     {
         return $this->owner->getId() === $user->getId();
     }
