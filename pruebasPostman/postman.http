@@ -107,3 +107,15 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MDUwNzk5M
 "email": "roger@api.com"
 
 }
+
+###
+
+PUT http://localhost:250/api/v1/groups/f06dc43c-923a-4f8f-a3a0-ee0bbab3b626/accept_request
+Content-Type: application/json
+
+{
+
+  "userId": "1e341e0f-116a-4fee-ba25-72cfd1d0a812",
+  "token": "b0e66fb10ce85c8b44519f211e7dbb421c51252b"
+
+}
