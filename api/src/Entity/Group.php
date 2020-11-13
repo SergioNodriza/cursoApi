@@ -101,7 +101,7 @@ class Group
         $this->users->add($user);
     }
 
-    public function deleteUser(User $user): void
+    public function removeUser(User $user): void
     {
         if ($this->users->contains($user)) {
             $this->users->removeElement($user);

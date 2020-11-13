@@ -11,7 +11,7 @@ use Doctrine\ORM\QueryBuilder;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-class CurrentUserException implements QueryCollectionExtensionInterface
+class CurrentUserExtension implements QueryCollectionExtensionInterface
 {
     private TokenStorageInterface $tokenStorage;
 

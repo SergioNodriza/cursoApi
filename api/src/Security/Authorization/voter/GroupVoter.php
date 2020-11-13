@@ -5,14 +5,14 @@ namespace App\Security\Authorization\voter;
 
 use App\Entity\Group;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 
-class GroupVoter
+class GroupVoter extends Voter
 {
     public const GROUP_READ = 'GROUP_READ';
     public const GROUP_CREATE = 'GROUP_CREATE';
     public const GROUP_UPDATE = 'GROUP_UPDATE';
     public const GROUP_DELETE = 'GROUP_DELETE';
-
 
     protected function supports(string $attribute, $subject): bool
     {
