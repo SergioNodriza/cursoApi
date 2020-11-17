@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Service\File;
 
-
-use League\Flysystem\AdapterInterface;
 use League\Flysystem\FileNotFoundException;
 use League\Flysystem\FilesystemInterface;
 use Psr\Log\LoggerInterface;
@@ -24,7 +22,6 @@ class FileService
 
     public function __construct(FilesystemInterface $defaultStorage, LoggerInterface $logger, string $mediaPath)
     {
-
         $this->defaultStorage = $defaultStorage;
         $this->logger = $logger;
         $this->mediaPath = $mediaPath;

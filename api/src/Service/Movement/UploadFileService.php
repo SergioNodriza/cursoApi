@@ -6,7 +6,6 @@ namespace App\Service\Movement;
 
 use App\Entity\Movement;
 use App\Entity\User;
-use App\Exceptions\Movement\CannotCreateMovementToAnotherUserException;
 use App\Exceptions\Movement\MovementDoesNotBelongToGroupException;
 use App\Exceptions\Movement\MovementDoesNotBelongToUserException;
 use App\Repository\MovementRepository;
@@ -36,7 +35,7 @@ class UploadFileService
         }
 
         if (!$movement->isOwnedBy($user)) {
-            throw new CannotCreateMovementToAnotherUserException();
+            throw new MovementDoesNotBelongToUserException();
         }
 
         $file = $this->fileService->validateFile($request, FileService::MOVEMENT_INPUT_NAME);

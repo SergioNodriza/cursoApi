@@ -16,7 +16,7 @@ class UploadFileTest extends MovementTestBase
           'ticket.jpg'
         );
 
-        self::$peter->request('POST', \sprintf('%s/%s/file', $this->endpoint, $this->getPeterMovementId()), [], ['file' => $file]);
+        self::$peter->request('POST', \sprintf('%s/%s/upload_file', $this->endpoint, $this->getPeterMovementId()), [], ['file' => $file]);
 
         $response = self::$peter->getResponse();
 
@@ -30,7 +30,7 @@ class UploadFileTest extends MovementTestBase
             'ticket.jpg'
         );
 
-        self::$peter->request('POST', \sprintf('%s/%s/file', $this->endpoint, $this->getPeterMovementId()), [], ['non-valid-input' => $file]);
+        self::$peter->request('POST', \sprintf('%s/%s/upload_file', $this->endpoint, $this->getPeterMovementId()), [], ['non-valid-input' => $file]);
 
         $response = self::$peter->getResponse();
 

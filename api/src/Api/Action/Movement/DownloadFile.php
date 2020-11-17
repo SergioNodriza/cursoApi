@@ -19,7 +19,6 @@ class DownloadFile
 
     public function __construct(DownloadFileService $downloadFileService)
     {
-
         $this->downloadFileService = $downloadFileService;
     }
 

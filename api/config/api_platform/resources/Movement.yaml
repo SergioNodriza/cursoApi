@@ -10,7 +10,7 @@ App\Entity\Movement:
         groups: [movement_create]
     upload_file:
       method: POST
-      path: /movements/{id}/file
+      path: /movements/{id}/upload_file
       controller: App\Api\Action\Movement\UploadFile
       deserialize: false
       openapi_context:
@@ -26,14 +26,14 @@ App\Entity\Movement:
                     format: binary
     download_file:
       method: POST
-      path: /movements/file
+      path: /movements/{id}/download_file
       controller: App\Api\Action\Movement\DownloadFile
       deserialize: false
       openapi_context:
         summary: Download a file attached to a movement
         requestBody:
           content:
-            multipart/form-data:
+            application/json:
               schema:
                 type: object
                 properties:
@@ -42,7 +42,7 @@ App\Entity\Movement:
                     required: true
         responses:
           200:
-            description: ok
+            description: OK
             content:
               application/octet-stream:
                 schema:
