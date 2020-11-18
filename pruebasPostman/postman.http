@@ -129,7 +129,7 @@ Content-Type: multipart/form-data; boundary=boundary
 --boundary
 Content-Disposition: form-data; name="file"; filename="file.png"
 
-< /home/sergio/Escritorio/ticket.jpg
+< /home/sergio/Escritorio/ticket.png
 
 ###
 
@@ -139,6 +139,6 @@ Content-Type: application/json
 
 {
 
-  "filePath": "file/9d2de71f0f78813043599aa98fea36ec130c7302.jpeg"
+  "filePath": "file/273c093e7d2b57f6f885253f68b937a7638a91c4.png"
 
 }
